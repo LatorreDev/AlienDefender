@@ -1,0 +1,13 @@
+﻿// =================================================
+// This game was developed by VanRage (David Latorre)
+// at Minuto de Dios Labs university in Bogota, Colombia
+// in November 2013 for Xtreme Pixel Studio
+// https://www.facebook.com/XtremePixelStudioOfficial
+// =================================================
+
+// =================================================
+// Este juego fue desarrollado por Vanrage (David Latorre)
+// En los Laboratorios de la  Universidad Minuto de Dios en
+// Bogotá, Colombia en Noviembre del 2013 para Xtreme Pixel Studio
+// https://www.facebook.com/XtremePixelStudioOfficial
+// =================================================

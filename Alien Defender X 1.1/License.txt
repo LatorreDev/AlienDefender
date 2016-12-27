@@ -1,0 +1,11 @@
+// =======================================
+// This game is licensed under GPL license
+// For more information read
+// http://www.gnu.org/licenses/gpl.txt
+// =======================================
+
+// =======================================
+// Este juego está licenciado bajo la licencia
+// GPL, para más información lea
+// http://www.gnu.org/licenses/gpl.txt
+// =======================================

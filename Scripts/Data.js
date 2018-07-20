@@ -8,7 +8,7 @@ var SKY_COLOR = '#6495ED';
 var SUN_START_POSITION = -120;
 var DELTA_BULLET = 20;
 var DELTA_DEFENDER = 10;
-var MAX_BULLET_DISTANCE = 800 - 100;
+var MAX_BULLET_DISTANCE = 600 - 100;
 var HIT_PROXIMITY = 70;
 
 // Codigos teclado para controles

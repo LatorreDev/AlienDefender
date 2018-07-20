@@ -77,7 +77,7 @@ function loadAllImages() {
 
 	countImagesLoading++;
     defender = new Image();
-    defender.src = 'Images/defender.png';
+    defender.src = 'Images/defender-pixel.png';
     defender.addEventListener("load", function () { countImagesLoading--; }, false);
     
 	countImagesLoading++;

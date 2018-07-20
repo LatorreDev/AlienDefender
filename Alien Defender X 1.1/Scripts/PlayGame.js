@@ -17,11 +17,8 @@ function keyDown(e) {
 	}
 	else if (e.keyCode == SPACE_BAR) {	
 		fireBullet();
-	}	
-	else if (e.keyCode == SPACE_BAR) {
 		shootSound();
-	
-	}
+	}	
 }
 
 

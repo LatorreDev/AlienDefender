@@ -24,7 +24,7 @@ function keyDown(e) {
 
 // Crear una bala en la posición defensor, y añadirlo a la matriz de todas las balas.
 function fireBullet() {
-    var newBullet = new Bullet(defenderXPosition -8, 800 -86 -70);
+    var newBullet = new Bullet(defenderXPosition -8, 580 -86 -70);
 	bullets.push(newBullet);
 	shootSound();
 }	
@@ -41,7 +41,7 @@ function shootSound() {
 			
 	// Crea una nave espacial en un lugar al azar, y añadirlo a la matriz de todas las naves espaciales.
 function createSpaceship() {
-	var newSpaceship = new Spaceship(-70, 100 + Math.random() * 200, Math.random() *10);
+	var newSpaceship = new Spaceship(-70, 50 + Math.random() * 200, Math.random() *10);
 	spaceships.push(newSpaceship);
 }	
 

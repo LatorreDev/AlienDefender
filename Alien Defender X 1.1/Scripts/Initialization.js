@@ -102,7 +102,7 @@ function loadAllImages() {
 	
 	countImagesLoading++;
     bullet = new Image();
-    bullet.src = 'Images/bullet.png';
+    bullet.src = 'Images/bullet-pixel.png';
     bullet.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	countImagesLoading++;

@@ -44,7 +44,7 @@ function shootSound() {
     audio.addEventListener("canplay", function () { audio.play(); }, false);
 	audio.loop= false;
 	audio.volume = 1;
-	audio.src = "Audio/Shoot.mp3";	
+	audio.src = "Audio/Shoot2.mp3";	
 	}
 }	
 

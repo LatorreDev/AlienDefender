@@ -9,34 +9,37 @@ window.addEventListener("load", function () {
 
   	// obtener el contexto canvas 2d
 	ctx = myCanvas.getContext('2d');
+
+	function playBackgroundMusic() {
+
+		var audio = document.createElement('audio');
+		audio.addEventListener("canplay", function () { audio.play(); }, false);
+		audio.loop= true;
+		audio.volume = 0.5;
+		audio.src = "Audio/play-the-game.mp3";
+		}
 	
 
 	//Iniciar el juego
 	playBackgroundMusic();
 	width = myCanvas.width;
 	height =myCanvas.height;
-	defenderXPosition = width - 43;
+	defenderXPosition = 0 - 0;
 	loadAllImages();
 	
-	// Manejar los eventos de ratón (Mover la imagen de defensor-tanque)
+	//Manejar los eventos de ratón (Mover la imagen de defensor-tanque)
 	document.addEventListener("mousemove", moveDefender, false);
 	document.addEventListener("mousedown", fireBullet, false);
 	document.addEventListener("keydown", keyDown, false);
 }, false);
+
 
 //=====================================================
 //						AUDIO
 //=====================================================
 {
 //Reproducir música de fondo continuamente!
-function playBackgroundMusic() {
 
-    var audio = document.createElement('audio');
-    audio.addEventListener("canplay", function () { audio.play(); }, false);
-	audio.loop= true;
-	audio.volume = 0.5;
-	audio.src = "Audio/BackgroundMusic.mp3";
-	}
 // Cargar Sonido Disparo
 function shootSound() {
 
@@ -130,4 +133,4 @@ function checkIfAllImagesLoaded() {
 	else {
 	    setTimeout(checkIfAllImagesLoaded, 100);  
 	}
-}	
+}

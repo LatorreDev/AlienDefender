@@ -21,6 +21,20 @@ function keyDown(e) {
 	}	
 }
 
+//Reproducir música de fondo continuamente!
+function playBackgroundMusic() {
+
+    var audio = document.createElement('audio');
+    audio.addEventListener("canplay", function () { audio.play(); }, false);
+	audio.loop= true;
+	audio.volume = 0.5;
+	audio.src = "Audio/play-the-game.mp3";
+	}
+
+//Reproduce música background
+
+playBackgroundMusic()
+
 
 // Crear una bala en la posición defensor, y añadirlo a la matriz de todas las balas.
 function fireBullet() {

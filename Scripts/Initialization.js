@@ -62,57 +62,68 @@ function loadAllImages() {
 	sky =ctx.createLinearGradient(0, width, 0, height);
 	sky.addColorStop(0, SKY_COLOR);
 	sky.addColorStop(1, '#FFFFFF');
-	
+
+	//Mountains load
 	countImagesLoading++;
     mountains = new Image();
     mountains.src = 'Images/mountains.png';
     mountains.addEventListener("load", function () { countImagesLoading--; }, false);
 
+	//Cityscape load
     countImagesLoading++;
     cityscape = new Image();
     cityscape.src = 'Images/cityscape.png';
     cityscape.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Ground load
 	countImagesLoading++;
     ground = new Image();
     ground.src = 'Images/ground.png';
     ground.addEventListener("load", function () { countImagesLoading--; }, false);
 
+	//Defender load
 	countImagesLoading++;
     defender = new Image();
     defender.src = 'Images/defender-pixel.png';
     defender.addEventListener("load", function () { countImagesLoading--; }, false);
-    
+	
+	//Cloud 1 load
 	countImagesLoading++;
 	cloud1 = new Image();
     cloud1.src = 'Images/cloud1.png';
     cloud1.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Cloud 2 load
 	countImagesLoading++;
     cloud2 = new Image();
     cloud2.src = 'Images/cloud2.png';
     cloud2.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Cloud 3 load
 	countImagesLoading++;
     cloud3 = new Image();
     cloud3.src = 'Images/cloud3.png';
     cloud3.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Sun Load
 	countImagesLoading++;
     sun = new Image();
     sun.src = 'Images/sun.png';
     sun.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Bullet load
 	countImagesLoading++;
     bullet = new Image();
     bullet.src = 'Images/bullet-pixel.png';
     bullet.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Wheel load
 	countImagesLoading++;
     wheel = new Image();
-    wheel.src = 'Images/wheel.png';
+    wheel.src = 'Images/wheel_pixel.png';
     wheel.addEventListener("load", function () { countImagesLoading--; }, false);
 	
+	//Space ship load
 	countImagesLoading++;
     spaceship = new Image();
     spaceship.src = 'Images/spaceship.png';

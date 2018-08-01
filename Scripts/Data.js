@@ -4,7 +4,7 @@ var width = 0;
 var height = 0;
 
 // Constantes
-var SKY_COLOR = '#6495ED';
+var SKY_COLOR = '#eaa3a9';
 var SUN_START_POSITION = -120;
 var DELTA_BULLET = 20;
 var DELTA_DEFENDER = 10;

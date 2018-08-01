@@ -78,7 +78,7 @@ function loadAllImages() {
 	//Ground load
 	countImagesLoading++;
     ground = new Image();
-    ground.src = 'Images/ground.png';
+    ground.src = 'Images/ground_pixel.png';
     ground.addEventListener("load", function () { countImagesLoading--; }, false);
 
 	//Defender load

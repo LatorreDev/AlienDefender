@@ -72,7 +72,7 @@ function loadAllImages() {
 	//Cityscape load
     countImagesLoading++;
     cityscape = new Image();
-    cityscape.src = 'Images/cityscape.png';
+    cityscape.src = 'Images/cityscape_pixel.png';
     cityscape.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	//Ground load

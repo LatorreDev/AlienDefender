@@ -108,7 +108,7 @@ function loadAllImages() {
 	//Sun Load
 	countImagesLoading++;
     sun = new Image();
-    sun.src = 'Images/sun.png';
+    sun.src = 'Images/sun_pixel.png';
     sun.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	//Bullet load

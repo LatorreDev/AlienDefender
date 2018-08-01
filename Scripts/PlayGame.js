@@ -92,7 +92,7 @@ function drawScene() {
 	ctx.drawImage(cityscape, 0, height - 400);
 	
 	// Dibuja el fondo.
-	ctx.drawImage(ground, 0, height -86);
+	ctx.drawImage(ground, 0, height -80);
 	
 	// Dibuja el sol
 	if (sunPosition >= width)

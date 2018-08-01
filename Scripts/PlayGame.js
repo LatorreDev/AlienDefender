@@ -124,14 +124,14 @@ function drawDefender() {
 	ctx.save();
 	ctx.translate(defenderXPosition - 43 + 6 + 17, height - 86 -34 + 17);
 	ctx.rotate(wheelAngle * Math.PI / 180);
-	ctx.drawImage(wheel, -17, -17, 34, 34);
+	ctx.drawImage(wheel, -17, -17, 25, 25);
 	ctx.restore();
 	
 	// Dibuja la rueda derecha (en un ángulo de rotación).
 	ctx.save();
 	ctx.translate(defenderXPosition -43 + 6 + 40 +17, height -86 -34 +17);
 	ctx.rotate(wheelAngle * Math.PI / 180);
-	ctx.drawImage(wheel, -17, -17, 34, 34);
+	ctx.drawImage(wheel, -17, -17, 25, 25);
 	ctx.restore();
 }
 

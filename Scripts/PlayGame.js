@@ -112,7 +112,7 @@ function drawScene() {
 function drawDefender() {
 
     // Dibuja el cuerpo del tanque
-    ctx.drawImage(defender, defenderXPosition -43, height -86 -70);
+    ctx.drawImage(defender, defenderXPosition -43, height -80 -50);
      
 	// Calcular el ángulo de rotación de las ruedas
     wheelAngle += defenderDirection * 10;

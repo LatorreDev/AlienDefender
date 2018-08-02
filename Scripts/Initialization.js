@@ -66,7 +66,7 @@ function loadAllImages() {
 	//Mountains load
 	countImagesLoading++;
     mountains = new Image();
-    mountains.src = 'Images/mountains.png';
+    mountains.src = 'Images/mountains_pixel.png';
     mountains.addEventListener("load", function () { countImagesLoading--; }, false);
 
 	//Cityscape load

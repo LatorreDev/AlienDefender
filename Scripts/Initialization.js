@@ -126,7 +126,7 @@ function loadAllImages() {
 	//Space ship load
 	countImagesLoading++;
     spaceship = new Image();
-    spaceship.src = 'Images/spaceship.png';
+    spaceship.src = 'Images/spaceship_pixel.png';
     spaceship.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	setTimeout(checkIfAllImagesLoaded, 100);

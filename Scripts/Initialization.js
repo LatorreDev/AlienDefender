@@ -90,19 +90,19 @@ function loadAllImages() {
 	//Cloud 1 load
 	countImagesLoading++;
 	cloud1 = new Image();
-    cloud1.src = 'Images/cloud1.png';
+    cloud1.src = 'Images/cloud1_pixel.png';
     cloud1.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	//Cloud 2 load
 	countImagesLoading++;
     cloud2 = new Image();
-    cloud2.src = 'Images/cloud2.png';
+    cloud2.src = 'Images/cloud2_pixel.png';
     cloud2.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	//Cloud 3 load
 	countImagesLoading++;
     cloud3 = new Image();
-    cloud3.src = 'Images/cloud3.png';
+    cloud3.src = 'Images/cloud3_pixel.png';
     cloud3.addEventListener("load", function () { countImagesLoading--; }, false);
 	
 	//Sun Load

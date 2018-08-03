@@ -1,5 +1,0 @@
-commit 1951da5eb2c908ef538bff53f0be0c6f7e987c42
-Author: root <root@debian-corporativo-David>
-Date:   Thu Dec 24 12:24:56 2015 -0500
-
-    Subida de versión 1.1 completa de Alien Defender X

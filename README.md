@@ -5,7 +5,7 @@
 ===
 
 You can play the game on:
-[Alien Defender X online](http://davidlatorre.github.io/AlienDefender/)
+[Alien Defender X online](http://latorredev.github.io/AlienDefender/)
 
 Your objective is eliminate all the invasors spaceships, protect the earth!!
 

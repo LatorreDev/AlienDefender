@@ -24,27 +24,27 @@ var SPACE_BAR = 32;
 
 var sky, background, cloud1, cloud2, cloud3, sun, bullet, spaceship;
 var mountains, cityscape, ground;
-var defender , wheel, bullet, spaceship;
+var defender, wheel, bullet, spaceship;
 var countImagesLoading = 0;
 
 // Variables de trabajo, para realizar un seguimiento de lo que está sucediendo en el juego.
 var bullets = [];
-var spaceships =[];
+var spaceships = [];
 var defenderXPosition;
 var defenderDirection = 0; // 0=still, -1=left, 1=right
 var wheelAngle = 0;
 var sunPosition = -120;
 
 //define el objeto bala
-var Bullet = function (x,y) {
-    this.x = x;
+var Bullet = function (x, y) {
+	this.x = x;
 	this.y = y;
 	this.defunct = false;
-	}
-	
+}
+
 // Define el objeto nave espacial
-var Spaceship = function(x, y, s) {
-    this.x = x;
+var Spaceship = function (x, y, s) {
+	this.x = x;
 	this.y = y;
 	this.speed = s;
 	this.defunct = false;

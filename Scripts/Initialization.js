@@ -59,77 +59,55 @@ function shootSound() {
 // Cargar todas las imágenes del juego.
 function loadAllImages() {
 
-	sky =ctx.createLinearGradient(0, width, 0, height);
+	sky = ctx.createLinearGradient(0, width, 0, height);
 	sky.addColorStop(0, SKY_COLOR);
 	sky.addColorStop(1, '#FFFFFF');
 
 	//Mountains load
-	countImagesLoading++;
-    mountains = new Image();
-    mountains.src = 'Images/mountains_pixel.png';
-    mountains.addEventListener("load", function () { countImagesLoading--; }, false);
+    mountains = imageLoader('Images/mountains_pixel.png');
 
 	//Cityscape load
-    countImagesLoading++;
-    cityscape = new Image();
-    cityscape.src = 'Images/cityscape_pixel.png';
-    cityscape.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    cityscape = imageLoader('Images/cityscape_pixel.png');
+    
 	//Ground load
-	countImagesLoading++;
-    ground = new Image();
-    ground.src = 'Images/ground_pixel.png';
-    ground.addEventListener("load", function () { countImagesLoading--; }, false);
+    ground = imageLoader('Images/ground_pixel.png');
 
 	//Defender load
-	countImagesLoading++;
-    defender = new Image();
-    defender.src = 'Images/defender-pixel.png';
-    defender.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    defender = imageLoader('Images/defender-pixel.png');
+
 	//Cloud 1 load
-	countImagesLoading++;
-	cloud1 = new Image();
-    cloud1.src = 'Images/cloud1_pixel.png';
-    cloud1.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    cloud1 = imageLoader('Images/cloud1_pixel.png');
+
 	//Cloud 2 load
-	countImagesLoading++;
-    cloud2 = new Image();
-    cloud2.src = 'Images/cloud2_pixel.png';
-    cloud2.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    cloud2 = imageLoader('Images/cloud2_pixel.png');
+
 	//Cloud 3 load
-	countImagesLoading++;
-    cloud3 = new Image();
-    cloud3.src = 'Images/cloud3_pixel.png';
-    cloud3.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    cloud3 = imageLoader('Images/cloud3_pixel.png');
+ 
 	//Sun Load
-	countImagesLoading++;
-    sun = new Image();
-    sun.src = 'Images/sun_pixel.png';
-    sun.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    sun = imageLoader('Images/sun_pixel.png');
+
 	//Bullet load
-	countImagesLoading++;
-    bullet = new Image();
-    bullet.src = 'Images/bullet-pixel.png';
-    bullet.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    bullet = imageLoader('Images/bullet-pixel.png');
+
 	//Wheel load
-	countImagesLoading++;
-    wheel = new Image();
-    wheel.src = 'Images/wheel_pixel.png';
-    wheel.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+    wheel = imageLoader('Images/wheel_pixel.png');
+
 	//Space ship load
-	countImagesLoading++;
-    spaceship = new Image();
-    spaceship.src = 'Images/spaceship_pixel.png';
-    spaceship.addEventListener("load", function () { countImagesLoading--; }, false);
+    spaceship = imageLoader('Images/spaceship_pixel.png');
 	
 	setTimeout(checkIfAllImagesLoaded, 100);
+}
+
+//Carga las imagenes y lleva la cuenta de las que se van cargando
+function imageLoader(url) {
+	countImagesLoading++;
+	let image = new Image();
+
+	image.src = url;
+    image.addEventListener("load", function () { countImagesLoading--; }, false);
+	
+	return image;
 }
 
 

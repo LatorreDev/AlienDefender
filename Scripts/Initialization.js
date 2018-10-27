@@ -37,7 +37,6 @@ window.addEventListener("load", function () {
 //=====================================================
 //						AUDIO
 //=====================================================
-{
 //Reproducir música de fondo continuamente!
 
 // Cargar Sonido Disparo
@@ -48,8 +47,7 @@ function shootSound() {
 	audio.loop= false;
 	audio.volume = 1;
 	audio.src = "Audio/Shoot2.mp3";	
-	}
-}	
+}
 
 // Añadir Scoreboard
 

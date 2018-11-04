@@ -1,32 +1,32 @@
 // Realiza la inicialización en el arranque.
 window.addEventListener("load", function () {
 
-    // Obtener el elemento canvas.
+	// Obtener el elemento canvas.
 	var myCanvas = document.querySelector('canvas');
 	if (!myCanvas || !myCanvas.getContext) {
-	   return;
+		return;
 	}
 
-  	// obtener el contexto canvas 2d
+	// obtener el contexto canvas 2d
 	ctx = myCanvas.getContext('2d');
 
 	function playBackgroundMusic() {
 
 		var audio = document.createElement('audio');
 		audio.addEventListener("canplay", function () { audio.play(); }, false);
-		audio.loop= true;
+		audio.loop = true;
 		audio.volume = 0.5;
 		audio.src = "Audio/play-the-game.mp3";
-		}
-	
+	}
+
 
 	//Iniciar el juego
 	playBackgroundMusic();
 	width = myCanvas.width;
-	height =myCanvas.height;
+	height = myCanvas.height;
 	defenderXPosition = 0 - 0;
 	loadAllImages();
-	
+
 	//Manejar los eventos de ratón (Mover la imagen de defensor-tanque)
 	document.addEventListener("mousemove", moveDefender, false);
 	document.addEventListener("mousedown", fireBullet, false);
@@ -37,19 +37,17 @@ window.addEventListener("load", function () {
 //=====================================================
 //						AUDIO
 //=====================================================
-{
 //Reproducir música de fondo continuamente!
 
 // Cargar Sonido Disparo
 function shootSound() {
 
-    var audio = document.createElement('audio');
-    audio.addEventListener("canplay", function () { audio.play(); }, false);
-	audio.loop= false;
+	var audio = document.createElement('audio');
+	audio.addEventListener("canplay", function () { audio.play(); }, false);
+	audio.loop = false;
 	audio.volume = 1;
-	audio.src = "Audio/Shoot2.mp3";	
-	}
-}	
+	audio.src = "Audio/Shoot2.mp3";
+}
 
 // Añadir Scoreboard
 
@@ -59,77 +57,55 @@ function shootSound() {
 // Cargar todas las imágenes del juego.
 function loadAllImages() {
 
-	sky =ctx.createLinearGradient(0, width, 0, height);
+	sky = ctx.createLinearGradient(0, width, 0, height);
 	sky.addColorStop(0, SKY_COLOR);
 	sky.addColorStop(1, '#FFFFFF');
 
 	//Mountains load
-	countImagesLoading++;
-    mountains = new Image();
-    mountains.src = 'Images/mountains_pixel.png';
-    mountains.addEventListener("load", function () { countImagesLoading--; }, false);
+	mountains = imageLoader('Images/mountains_pixel.png');
 
 	//Cityscape load
-    countImagesLoading++;
-    cityscape = new Image();
-    cityscape.src = 'Images/cityscape_pixel.png';
-    cityscape.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	cityscape = imageLoader('Images/cityscape_pixel.png');
+
 	//Ground load
-	countImagesLoading++;
-    ground = new Image();
-    ground.src = 'Images/ground_pixel.png';
-    ground.addEventListener("load", function () { countImagesLoading--; }, false);
+	ground = imageLoader('Images/ground_pixel.png');
 
 	//Defender load
-	countImagesLoading++;
-    defender = new Image();
-    defender.src = 'Images/defender-pixel.png';
-    defender.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	defender = imageLoader('Images/defender-pixel.png');
+
 	//Cloud 1 load
-	countImagesLoading++;
-	cloud1 = new Image();
-    cloud1.src = 'Images/cloud1_pixel.png';
-    cloud1.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	cloud1 = imageLoader('Images/cloud1_pixel.png');
+
 	//Cloud 2 load
-	countImagesLoading++;
-    cloud2 = new Image();
-    cloud2.src = 'Images/cloud2_pixel.png';
-    cloud2.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	cloud2 = imageLoader('Images/cloud2_pixel.png');
+
 	//Cloud 3 load
-	countImagesLoading++;
-    cloud3 = new Image();
-    cloud3.src = 'Images/cloud3_pixel.png';
-    cloud3.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	cloud3 = imageLoader('Images/cloud3_pixel.png');
+
 	//Sun Load
-	countImagesLoading++;
-    sun = new Image();
-    sun.src = 'Images/sun_pixel.png';
-    sun.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	sun = imageLoader('Images/sun_pixel.png');
+
 	//Bullet load
-	countImagesLoading++;
-    bullet = new Image();
-    bullet.src = 'Images/bullet-pixel.png';
-    bullet.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	bullet = imageLoader('Images/bullet-pixel.png');
+
 	//Wheel load
-	countImagesLoading++;
-    wheel = new Image();
-    wheel.src = 'Images/wheel_pixel.png';
-    wheel.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	wheel = imageLoader('Images/wheel_pixel.png');
+
 	//Space ship load
-	countImagesLoading++;
-    spaceship = new Image();
-    spaceship.src = 'Images/spaceship_pixel.png';
-    spaceship.addEventListener("load", function () { countImagesLoading--; }, false);
-	
+	spaceship = imageLoader('Images/spaceship_pixel.png');
+
 	setTimeout(checkIfAllImagesLoaded, 100);
+}
+
+//Carga las imagenes y lleva la cuenta de las que se van cargando
+function imageLoader(url) {
+	countImagesLoading++;
+	let image = new Image();
+
+	image.src = url;
+	image.addEventListener("load", function () { countImagesLoading--; }, false);
+
+	return image;
 }
 
 
@@ -138,10 +114,10 @@ function checkIfAllImagesLoaded() {
 
 	// si todas las imágenes se han cargado por ahora, establecer re-dibujar cada 50 ms y una nave espacial
 	if (countImagesLoading == 0) {
-		setInterval(draw, 50); 
+		setInterval(draw, 50);
 		setInterval(createSpaceship, 1000);
-    }
+	}
 	else {
-	    setTimeout(checkIfAllImagesLoaded, 100);  
+		setTimeout(checkIfAllImagesLoaded, 100);
 	}
 }
